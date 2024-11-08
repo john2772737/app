@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../components/customAppBar.dart';
+import '../components/customEndDrawer.dart';
 
 class BaseScreen extends StatelessWidget {
   final Widget child;
@@ -7,10 +9,21 @@ class BaseScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isLoggedIn = true;
+
+    List<Map<String, dynamic>> menuItems = [
+      {
+        'icon': Icons.settings,
+        'title': 'Settings',
+      },
+    ];
+    
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Base Screen'),
-      ),
+      appBar: CustomAppBar(),
+      endDrawer: CustomEndDrawer(
+          isLoggedIn: isLoggedIn,
+          menuItems: menuItems,
+        ),
       body: child,
     );
   }
