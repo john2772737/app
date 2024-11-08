@@ -7,8 +7,9 @@ import '../pages/loginPage.dart';
 import '../pages/editPage.dart';
 import '../pages/loadingScreen.dart';
 import '../pages/baseScreen.dart';
+
 final GoRouter router = GoRouter(
-  initialLocation: "/loading",
+  initialLocation: "/profilePage",
   routes: <RouteBase>[
   
    GoRoute(
