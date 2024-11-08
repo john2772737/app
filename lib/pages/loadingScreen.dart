@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class LoadingScreen extends StatelessWidget {
+class Loadingscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Get screen width and height using MediaQuery
-    double screenWidth = MediaQuery.of(context).size.width;
-    double screenHeight = MediaQuery.of(context).size.height;
+    // Ensure Wi-Fi is checked after a delay (without stateful logic)
+ 
 
     return Scaffold(
       body: Container(
@@ -22,4 +21,6 @@ class LoadingScreen extends StatelessWidget {
       ),
     );
   }
+
+  
 }

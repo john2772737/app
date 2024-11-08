@@ -14,7 +14,7 @@ final GoRouter router = GoRouter(
    GoRoute(
     name: "/",
     path: "/loading",
-    builder: (context, state) => LoadingScreen(),
+    builder: (context, state) => Loadingscreen(),
   ),
   GoRoute(
     name: "loginPage",
