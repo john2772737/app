@@ -1,11 +1,18 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
-class Loadingscreen extends StatelessWidget {
-  const Loadingscreen({super.key});
-
+class LoadingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: Lottie.asset(
+          'assets/loading.json', // path to your Lottie JSON file
+          width: 200, // You can adjust the size
+          height: 200,
+          fit: BoxFit.fill,
+        ),
+      ),
+    );
   }
 }

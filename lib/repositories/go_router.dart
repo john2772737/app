@@ -1,15 +1,19 @@
+
+
+import 'package:app/pages/registerPage.dart';
 import 'package:go_router/go_router.dart';
 import '../pages/loginPage.dart';
 import '../pages/editPage.dart';
 import '../pages/loadingScreen.dart';
-final GoRouter goRouter = GoRouter(
-  initialLocation: "/",
+
+final GoRouter router = GoRouter(
+  initialLocation: "/loading",
   routes: <RouteBase>[
   
    GoRoute(
     name: "/",
     path: "/loading",
-    builder: (context, state) => LoginPage(),
+    builder: (context, state) => LoadingScreen(),
   ),
   GoRoute(
     name: "loginPage",
@@ -24,6 +28,6 @@ final GoRouter goRouter = GoRouter(
   GoRoute(
     name: "registerPage",
     path: "/registerPage",
-    builder: (context, state) => Loadingscreen(),
+    builder: (context, state) => Registerpage(),
   ),
 ]);
